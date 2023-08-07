@@ -8,10 +8,10 @@ const SearchBar = () => {
     <>
     <Flex h='45px' padding={2}>
         <Box>
-            <Input borderColor='white' w='550px' placeholder="INSERT A WORD!"/>
+            <Input borderColor='blue.500' w='550px' fontSize='20px'color='blackAlpha.800' placeholder="INSERT A WORD!"/>
         </Box>
         <Box>
-            <Button color={"white"} backgroundColor='gray.400'> GO!</Button>
+            <Button color='green.400' backgroundColor='blackAlpha.700' > GO!</Button>
         </Box>
         <Box>
             
