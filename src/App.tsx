@@ -1,4 +1,5 @@
-import { Grid, GridItem } from "@chakra-ui/react"
+import { Grid, GridItem, Show } from "@chakra-ui/react"
+import Header from "./components/Header"
 
 
 
@@ -8,11 +9,42 @@ function App() {
 
   return (
     <>
-    <Grid templateAreas={`"nav nav" "aside main"`}>
-      <GridItem area='nav' bg='blue'>nav-info</GridItem>
-      <GridItem area='aside' bg='green'> hoved seksjon</GridItem>
-      <GridItem area='main' bg='yellow'>Informasjon</GridItem>
-    </Grid>
+
+<Grid
+  templateAreas={{lg:`"header header"
+                      "nav main"
+                      "nav footer"`, 
+                  sm: `"header header"
+                        "nav main"
+                        "nav footer"`}}
+  gridTemplateRows={'70px 1fr 30px'}
+  gridTemplateColumns={'150px 1fr'}
+  h='200px'
+  gap='1'
+  color='blackAlpha.700'
+  fontWeight='bold'
+  margin='5px'
+>
+  <GridItem pl='2'  area={'header'}>
+    <Header/>
+  </GridItem>
+
+  <Show above="sm">
+    
+  <GridItem pl='2' bg='pink.300' area={'nav'}>Nav</GridItem>
+  </Show>
+
+  <GridItem pl='2' bg='green.300' area={'main'}>
+    Main
+  </GridItem>
+  <GridItem pl='2' bg='blue.300' area={'footer'}>
+    Footer
+  </GridItem>
+</Grid>
+
+    
+
+
 
       
     </>
