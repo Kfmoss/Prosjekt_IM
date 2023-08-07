@@ -21,11 +21,11 @@ function App() {
   gridTemplateColumns={'150px 1fr'}
   h='200px'
   gap='1'
-  color='blackAlpha.700'
+  color='blackAlpha.800'
   fontWeight='bold'
   margin='5px'
 >
-  <GridItem pl='2'  area={'header'}>
+  <GridItem pl='2' bg='gray.600' area={'header'}>
     <Header/>
   </GridItem>
 

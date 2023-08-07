@@ -1,11 +1,24 @@
-import { Input } from "@chakra-ui/react"
+import { Box, Button, Flex, Input } from "@chakra-ui/react"
 
 
 const SearchBar = () => {
 
     
   return (
-    <Input borderColor='blue.500' w='500px' placeholder="insert a word"/>
+    <>
+    <Flex h='45px' padding={2}>
+        <Box>
+            <Input borderColor='white' w='550px' placeholder="INSERT A WORD!"/>
+        </Box>
+        <Box>
+            <Button color={"white"} backgroundColor='gray.400'> GO!</Button>
+        </Box>
+        <Box>
+            
+        </Box>
+    </Flex>
+    
+    </>
   )
 }
 
