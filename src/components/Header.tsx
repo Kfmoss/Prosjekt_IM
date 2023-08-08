@@ -2,6 +2,7 @@ import { Box, Flex, Image } from "@chakra-ui/react";
 import logo from "../assets/navbar/oktopus.png";
 import SearchBar from "./SearchBar";
 import ButtonMenu from "./ButtonMenu";
+import ColorModeSwitch from "./ColorModeSwitch";
 
 
 
@@ -19,7 +20,11 @@ const Header = () => {
 
         </Box>
         <Box>
+
           <ButtonMenu/>
+        </Box>
+        <Box>
+          <ColorModeSwitch/>
 
         </Box>
     </Flex>

@@ -22,20 +22,21 @@ function App() {
   h='200px'
   gap='1'
   margin='5px'
+  bg={"white"}
 >
-  <GridItem pl='2' bg='gray.300' area={'header'}>
+  <GridItem pl='2'  area={'header'}>
     <Header/>
   </GridItem>
 
   <Show above="sm">
     
-  <GridItem pl='2' bg='pink.300' area={'nav'}>Nav</GridItem>
+  <GridItem pl='2' area={'nav'}>Nav</GridItem>
   </Show>
 
-  <GridItem pl='2' bg='green.300' area={'main'}>
+  <GridItem pl='2' area={'main'}>
     Main
   </GridItem>
-  <GridItem pl='2' bg='blue.300' area={'footer'}>
+  <GridItem pl='2'  area={'footer'}>
     Footer
   </GridItem>
 </Grid>
