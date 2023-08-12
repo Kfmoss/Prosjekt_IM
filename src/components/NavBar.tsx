@@ -1,5 +1,6 @@
 
 import ButtonMenu from "./ButtonMenu";
+import Tema from "./Tema";
 
 
 
@@ -10,6 +11,7 @@ const NavBar = () => {
 
     
       <ButtonMenu/> 
+      <Tema/>
       
 
     

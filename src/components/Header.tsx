@@ -1,8 +1,6 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
-
 import SearchBar from "./SearchBar";
 import ColorModeSwitch from "./ColorModeSwitch";
-import Title from "./Title";
 
 
 

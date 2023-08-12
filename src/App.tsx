@@ -13,7 +13,7 @@ function App() {
     <>
 
 <Grid
-  templateAreas={{lg:`"header header"
+  templateAreas={{lg:`"nav header"
                       "nav main"
                       "nav footer"`, 
                   sm: `"header header"
