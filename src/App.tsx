@@ -1,5 +1,7 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react"
 import Header from "./components/Header"
+import NavBar from "./components/NavBar"
+import theme_s from "./Theme"
 
 
 
@@ -17,27 +19,32 @@ function App() {
                   sm: `"header header"
                         "nav main"
                         "nav footer"`}}
-  gridTemplateRows={'70px 1fr 30px'}
-  gridTemplateColumns={'150px 1fr'}
-  h='200px'
+  gridTemplateRows={'110px 1fr 30px'}
+  gridTemplateColumns={'250px 1fr'}
+  // h='200px'
   gap='1'
-  margin='5px'
+ 
+  padding='5px'
   bg={"white"}
 >
-  <GridItem pl='2'  area={'header'}>
+  <GridItem pl='2' fontFamily={'sans-serif'}  area={'header'}>
     <Header/>
   </GridItem>
 
   <Show above="sm">
     
-  <GridItem pl='2' area={'nav'}>Nav</GridItem>
+  <GridItem pl='2'bg='blue' area={'nav'}>
+
+
+  <NavBar/>
+  </GridItem>
   </Show>
 
   <GridItem pl='2' area={'main'}>
-    Main
+  
   </GridItem>
   <GridItem pl='2'  area={'footer'}>
-    Footer
+  
   </GridItem>
 </Grid>
 

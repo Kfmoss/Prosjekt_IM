@@ -1,8 +1,25 @@
 
+import ButtonMenu from "./ButtonMenu";
+
+
 
 const NavBar = () => {
   return (
-    <div>NavBar</div>
+    <>
+
+
+    
+      <ButtonMenu/> 
+      
+
+    
+
+      
+    
+
+    
+    
+    </>
   )
 }
 

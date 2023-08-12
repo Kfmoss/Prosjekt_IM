@@ -9,6 +9,11 @@ const config: ThemeConfig = {
 
 // 3. extend the theme
  export const theme= extendTheme({config,
+    fonts:{
+        Header:`'Open Sans', sans-serif`,
+        Main:`'Raleway', sans-serif`,
+
+    },
     colors:{
         gray:{
             50:'#f9f9f9',
@@ -74,6 +79,7 @@ const config: ThemeConfig = {
             900:'#63171B',
 
         },
+    
 
 
     }});

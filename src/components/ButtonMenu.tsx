@@ -1,7 +1,19 @@
-import { Box, Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import { Alert, AlertTitle, Box, Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import React, { ReactNode } from 'react'
 
+
+
+interface Props{
+  children:ReactNode;
+  onSelect: ()=>void;
+}
 
 const ButtonMenu = () => {
+  
+  // const alert= () =>{
+  //   <Alert status='warning'> <AlertTitle> Du må velge en av disse!</AlertTitle></Alert>
+  // }
+
 
     const sizeText_menu = '22px';
     const sizeText_button= '25px';
@@ -15,7 +27,7 @@ const ButtonMenu = () => {
    <Box padding={2}>
 
     <Menu>
-      <MenuButton as={Button} fontSize={sizeText_button}
+      <MenuButton as={Button}  fontSize={sizeText_button}
         backgroundColor='gray.300'
         px={4}
         py={2}
@@ -28,7 +40,7 @@ const ButtonMenu = () => {
        >
         Meny</MenuButton>
         <MenuList fontSize={sizeText_menu}>
-          <MenuItem>Opprett konto</MenuItem>
+          <MenuItem className="alert alert-warning alert-dismissible" role="alert">Opprett konto</MenuItem>
           <MenuItem>Finn prosjekt</MenuItem>
           <MenuItem>Velg et tema</MenuItem>
           <MenuItem>Lær noe nytt</MenuItem>

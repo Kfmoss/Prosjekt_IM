@@ -1,8 +1,8 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
-import logo from "../assets/navbar/oktopus.png";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
+
 import SearchBar from "./SearchBar";
-import ButtonMenu from "./ButtonMenu";
 import ColorModeSwitch from "./ColorModeSwitch";
+import Title from "./Title";
 
 
 
@@ -10,23 +10,19 @@ import ColorModeSwitch from "./ColorModeSwitch";
 const Header = () => {
   return (
     <>
+    <Text textAlign='center' color='Tomato' fontWeight='600' fontSize='4xl' fontFamily='sans-serif'>KodeStorm</Text>
     <Flex justifyContent='space-between'>
-        <Box>
-            <Image src={logo} boxSize={'60px'} borderRadius='10px' padding='5px'/>
-
-        </Box>
         <Box>
           <SearchBar/>
 
         </Box>
+     
         <Box>
+         
 
-          <ButtonMenu/>
-        </Box>
-        <Box>
           <ColorModeSwitch/>
-
         </Box>
+
     </Flex>
     
     </>
