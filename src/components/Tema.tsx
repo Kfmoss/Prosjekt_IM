@@ -1,6 +1,9 @@
 import { List, ListItem, Text, VStack} from "@chakra-ui/react"
 
 
+
+
+
 const Tema = () => {
 
     const options=['Utvikling', 'Nettverk', 'MobilProgrammering', 'Hacking', 'DataBaser', 'Informasjon om Fagbrev'];
@@ -9,10 +12,11 @@ const Tema = () => {
   return (
     <>
     <VStack>
-        
-    <Text fontSize={"2xl"}> Tema </Text>
+    <Text fontSize="2xl"> Tema </Text>
     <List>
-       {options.map(item => <ListItem key={item}>{item}</ListItem>)}
+       {/* {options.map(item => <ListItem onClick={()=>alert('Please check this out')} key={item}>{item}</ListItem>)} */}
+       {options.map(item => <ListItem onClick={()=>alert('Please check this out')} key={item}>{item}</ListItem>)}
+
     </List>
     </VStack>
 

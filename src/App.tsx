@@ -1,7 +1,7 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react"
 import Header from "./components/Header"
 import NavBar from "./components/NavBar"
-import theme_s from "./Theme"
+import Footer from "./components/Footer"
 
 
 
@@ -43,7 +43,8 @@ function App() {
   <GridItem pl='2' area={'main'}>
   
   </GridItem>
-  <GridItem pl='2'  area={'footer'}>
+  <GridItem pl='2' bg='#718096'  area={'footer'}>
+    <Footer></Footer>
   
   </GridItem>
 </Grid>
