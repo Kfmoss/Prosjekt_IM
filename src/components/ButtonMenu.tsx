@@ -1,4 +1,4 @@
-import { Alert, AlertTitle, Box, Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import {Box, Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
 import React, { ReactNode } from 'react'
 
 
@@ -10,17 +10,9 @@ interface Props{
 
 const ButtonMenu = () => {
   
-  // const alert= () =>{
-  //   <Alert status='warning'> <AlertTitle> Du må velge en av disse!</AlertTitle></Alert>
-  // }
-
 
     const sizeText_menu = '22px';
     const sizeText_button= '25px';
-    
-
-
-
 
   return (
    <>
@@ -40,11 +32,9 @@ const ButtonMenu = () => {
        >
         Meny</MenuButton>
         <MenuList fontSize={sizeText_menu}>
-          <MenuItem className="alert alert-warning alert-dismissible" role="alert">Opprett konto</MenuItem>
-          <MenuItem>Finn prosjekt</MenuItem>
-          <MenuItem>Velg et tema</MenuItem>
+          <MenuItem >Opprett konto</MenuItem>
           <MenuItem>Lær noe nytt</MenuItem>
-          <MenuItem>Om IM</MenuItem>
+
         </MenuList>
    </Menu>
 

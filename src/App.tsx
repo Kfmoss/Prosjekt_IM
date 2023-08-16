@@ -25,7 +25,7 @@ function App() {
   gap='1'
  
   padding='5px'
-  bg={"white"}
+  // bg={"white"}
 >
   <GridItem pl='2' fontFamily={'sans-serif'}  area={'header'}>
     <Header/>
