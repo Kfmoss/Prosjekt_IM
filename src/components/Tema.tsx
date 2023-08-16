@@ -1,4 +1,4 @@
-import { List, ListItem, Text, VStack, Box, Heading} from "@chakra-ui/react"
+import { List, ListItem,VStack, Box, Heading} from "@chakra-ui/react"
 import {Icon} from "@chakra-ui/react"
 import { MdSettings, MdDeveloperMode} from 'react-icons/md'
 import {BsFillCameraReelsFill} from 'react-icons/bs'

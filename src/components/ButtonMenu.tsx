@@ -1,5 +1,6 @@
 import {Box, Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
 import React, { ReactNode } from 'react'
+import {BsChevronDown } from "react-icons/bs"
 
 
 
@@ -11,15 +12,15 @@ interface Props{
 const ButtonMenu = () => {
   
 
-    const sizeText_menu = '22px';
-    const sizeText_button= '25px';
+    const sizeText_menu = '23px';
+    const sizeText_button= '23px';
 
   return (
    <>
    <Box padding={2}>
 
     <Menu>
-      <MenuButton as={Button}  fontSize={sizeText_button}
+      <MenuButton as={Button} rightIcon={<BsChevronDown/>} fontSize={sizeText_button}
         backgroundColor='gray.300'
         px={4}
         py={2}
