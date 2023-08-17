@@ -8,20 +8,22 @@ const Tema = () => {
 
     const options=['Utvikling', 'Nettverk', 'MobilProgrammering', 'Hacking', 'DataBaser'];
     const media =['Fotoredigering', 'Videoredigering', 'VideoProduksjon','Lyd' ];
-    const info =['Hva er YFF?', 'Om vurdering', 'Om IM', 'Informasjon om Fagbrev']
+    const info =['Hva er YFF?', 'Om vurdering', 'Om IM', 'Om Fagbrev']
 
    
 
   return (
     <>
-    <VStack alignItems={'right'}>
+    <VStack alignItems={'right'} spacing={4}>
 
       <Box paddingBottom={2} >
+        <br />
 
       <Heading fontSize="2xl" color='white' fontWeight='600'> IT-Prosjekter </Heading>
-      <List>
+      <br />
+      <List spacing={4}>
         {/* {options.map(item => <ListItem onClick={()=>alert('Please check this out')} key={item}>{item}</ListItem>)} */}
-        {options.map(item => <ListItem onClick={()=> alert('Valg in progress')} key={item}> <Icon as={MdDeveloperMode} color='white' marginRight={1}/><a href="#">{item}</a> </ListItem>)}
+        {options.map(item => <ListItem fontSize='22px' onClick={()=> alert('Valg in progress')} key={item}> <Icon as={MdDeveloperMode} color='white' marginRight={1}/><a  href="#">{item}</a> </ListItem>)}
 
       </List>
       </Box>
@@ -30,9 +32,10 @@ const Tema = () => {
 
         
         <Heading fontSize="2xl" color='white' fontWeight='600'> MedieProduksjon </Heading>
-      <List>
+        <br />
+      <List spacing={4}>
         {/* {options.map(item => <ListItem onClick={()=>alert('Please check this out')} key={item}>{item}</ListItem>)} */}
-        {media.map(item => <ListItem onClick={()=>alert('Valg in progress')} key={item}> <Icon as={BsFillCameraReelsFill} color='red' marginRight={1}/><a href="#">{item}</a></ListItem>)}
+        {media.map(item => <ListItem fontSize='22px' onClick={()=>alert('Valg in progress')} key={item}> <Icon as={BsFillCameraReelsFill} color='red' marginRight={1}/><a href="#">{item}</a></ListItem>)}
 
       </List>
     
@@ -43,11 +46,12 @@ const Tema = () => {
 
       
       <Heading fontSize="2xl" color='white' fontWeight='600'>YFF </Heading>
+      <br />
 
       
-      <List>
+      <List spacing={4}>
         {/* {options.map(item => <ListItem onClick={()=>alert('Please check this out')} key={item}>{item}</ListItem>)} */}
-        {info.map(item => <ListItem onClick={()=>alert('Valg in progress')} key={item}> <Icon as={MdSettings} marginRight={1} /><a href="#">{item}</a></ListItem>)}
+        {info.map(item => <ListItem fontSize='22px' onClick={()=>alert('Valg in progress')} key={item}> <Icon as={MdSettings} marginRight={1} /><a href="#">{item}</a></ListItem>)}
 
       </List>
 
