@@ -10,7 +10,7 @@ const Tema = () => {
     const media =['Fotoredigering', 'Videoredigering', 'VideoProduksjon','Lyd' ];
     const info =['Hva er YFF?', 'Om vurdering', 'Om IM', 'Informasjon om Fagbrev']
 
-    // alert('Valg in progress')
+   
 
   return (
     <>
@@ -21,7 +21,7 @@ const Tema = () => {
       <Heading fontSize="2xl" color='white' fontWeight='600'> IT-Prosjekter </Heading>
       <List>
         {/* {options.map(item => <ListItem onClick={()=>alert('Please check this out')} key={item}>{item}</ListItem>)} */}
-        {options.map(item => <ListItem onClick={()=> alert('Valg in progress')} key={item}> <Icon as={MdDeveloperMode} color='white' marginRight={1}/><a href="#">{item}</a>  </ListItem>)}
+        {options.map(item => <ListItem onClick={()=> alert('Valg in progress')} key={item}> <Icon as={MdDeveloperMode} color='white' marginRight={1}/><a href="#">{item}</a> </ListItem>)}
 
       </List>
       </Box>
