@@ -19,7 +19,7 @@ function App() {
                   sm: `"header header"
                         "nav main"
                         "nav footer"`}}
-  gridTemplateRows={'110px 1fr 215px'} //110px
+  gridTemplateRows={'110px 1fr 160px'} //110px
   gridTemplateColumns={'280px 1fr'} //250px
   // h='200px'
   gap='1'
