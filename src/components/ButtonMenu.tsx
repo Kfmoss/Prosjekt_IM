@@ -1,6 +1,8 @@
-import {Box, Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import {Box, Button, FormControl, FormLabel, Input, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
 import React, { ReactNode } from 'react'
 import {BsChevronDown } from "react-icons/bs"
+import { useState } from "react"
+import ClickAwayListener from 'react-click-away-listener';
 
 
 
@@ -9,7 +11,17 @@ interface Props{
   onSelect: ()=>void;
 }
 
+
+
+
 const ButtonMenu = () => {
+
+  const [popUp, setPopUp] = useState(false);
+  const onSelect =()=>{
+    setPopUp(true)
+
+  }
+
   
 
     const sizeText_menu = '23px';
@@ -33,7 +45,21 @@ const ButtonMenu = () => {
        >
         Meny</MenuButton>
         <MenuList fontSize={sizeText_menu}>
-          <MenuItem >Opprett konto</MenuItem>
+          <MenuItem onClick={()=>setPopUp(true)}>Opprett konto</MenuItem>
+
+          {popUp&&(<ClickAwayListener onClickAway={() =>setPopUp(false)}>
+            <Box position='relative' h='100hv'>
+
+            <FormControl className='popUp'>
+              <FormLabel>
+                ditt navn:
+              </FormLabel>
+              <Input placeholder="your name here"></Input>
+            </FormControl>
+
+            </Box>
+
+          </ClickAwayListener>)}
           <MenuItem>Lær noe nytt</MenuItem>
 
         </MenuList>
