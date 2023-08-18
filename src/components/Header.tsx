@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import ColorModeSwitch from "./ColorModeSwitch";
 import Tid from "./filter/Tid";
 import ArbeidsType from "./filter/ArbeidsType";
+import BlinkCursor from "./BlinkCursor";
 
 
 
@@ -12,8 +13,12 @@ const Header = () => {
   return (
     <>
     <HStack justifyContent={'center'}>
-    <Text textAlign='center' color='Tomato' fontWeight='600' fontSize='4xl' fontFamily='sans-serif'>KodeStorm</Text>
-    <Image src="/home/edg/Desktop/Aasiden_IM/prosjekt1/src/assets/braces.svg"/>
+     blinking cursor animation
+    <img src="src/assets/informasjon/title33.png" alt="" />
+    <BlinkCursor/>
+    {/* <Text overflow='hidden' borderRight='.15em solid green' width='0' background='navajowhite' color='white' fontSize='1.2rem'  animation='typing 1s steps(20, end) forwards, blink .8s infinite' fontFamily='sans-serif'>...</Text> */}
+
+    <h1></h1>
 
     </HStack>
     <Flex justifyContent='space-between'>
