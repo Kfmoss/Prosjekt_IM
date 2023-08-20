@@ -1,6 +1,6 @@
-import { Box, Button, FormControl, FormLabel, Input, Menu, MenuButton, MenuItem, MenuList, Stack, VStack } from "@chakra-ui/react"
+import { Box, Button, FormControl, FormLabel, Text, Image,Input, Menu, MenuButton, MenuItem, MenuList, Stack, VStack, CloseButton, Flex, Heading } from "@chakra-ui/react"
 import React, { ReactNode } from 'react'
-import {BsChevronDown } from "react-icons/bs"
+import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 import { useState } from "react"
 
 
@@ -21,24 +21,71 @@ const ButtonMenu = () => {
   const [popUp, setPopUp] = useState(false);
 
   const popupMenu =()=>{
+
+
     return(
       <>
+      <Card backgroundColor={'gray.500'}  position={'absolute'} w={'420px'} h={'500px'} top='18%' left={'9%'}>
+        <CardHeader>
 
-      <Stack backgroundColor={'gray.500'}  position={'absolute'} w={'420px'} h={'320px'}>
+          <Flex justifyContent={'space-between'}>
+            <Box>
+              <Heading>
+                Registrer deg
+
+              </Heading>
+
+            </Box>
+
+            <Box>
+
+              <CloseButton aria-label="Lukk" onClick={() =>setPopUp(false)}/>
+
+            </Box>
+          </Flex>
+        </CardHeader>
+        <CardBody>
+
+        {/* <VStack backgroundColor={'gray.500'}  position={'absolute'} w={'420px'} h={'320px'}> */}
+        <VStack>
+          <FormControl  >
+            <FormLabel as='legend'  fontSize='30px'color={"black"} textAlign={'center'}>Brukernavn</FormLabel>
+            <Input p={5} placeholder="Ditt navn her!" fontSize='26px' size='lg' variant={'ouline'}></Input>
+            <FormLabel as='legend'  fontSize='30px'color={"black"} textAlign={'center'}>Passord</FormLabel>
+            <Input p={5} type="password" placeholder="Ditt passord her!" fontSize='26px' size='lg' variant={'ouline'}></Input>
+            <FormLabel as='legend'  fontSize='30px'color={"black"} textAlign={'center'}>Passord</FormLabel>
+            <Input p={5} type="password" placeholder="Skriv inn passord på nytt!" fontSize='26px' size='lg' variant={'ouline'}></Input>
         
-      <FormControl  >
-        <FormLabel as='legend'  fontSize='30px'color={"black"} textAlign={'center'}> Skriv inn navn</FormLabel>
-        <Input p={5} placeholder="Ditt navn her!" fontSize='26px' size='lg' variant={'ouline'}></Input>
-        <FormLabel as='legend'  fontSize='30px'color={"black"} textAlign={'center'}>Klasse</FormLabel>
-        <Input p={5} placeholder="Hvilken klasse er du på?" fontSize='26px' size='lg' variant={'ouline'}></Input>
+            {/* <Button  margin='auto' justifyContent={'center'} padding='10px' border='2px' colorScheme='green' gap='4' width='190px' variant='outline' onClick={()=> setPopUp(false)}> SEND</Button> */}
+        </FormControl>
+      </VStack>
+        </CardBody>
+        <CardFooter>
+        <Button  margin='auto' justifyContent={'center'} padding='10px' border='2px' colorScheme='green' gap='4' width='190px' variant='solid' onClick={()=> setPopUp(false)}> SEND</Button>
+
+        </CardFooter>
         
-        <Button  margin='auto' justifyContent={'center'} padding='10px' border='2px' colorScheme='green' gap='4' width='190px' variant='outline' onClick={()=> setPopUp(false)}> SEND</Button>
 
 
-        
-      </FormControl>
-      </Stack>
+      
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </Card>
+
+     
       {/* <form >
         <label htmlFor="name"> Navn</label>
         <input placeholder='your name here' color="gray" id="name" type="text"></input>
@@ -57,26 +104,26 @@ const ButtonMenu = () => {
 
   return (
    <>
+   
    <Box padding={2}>
 
     <Menu>
-      <MenuButton as={Button} rightIcon={<BsChevronDown/>} fontSize={sizeText_button}
+      <MenuButton as={Button} fontSize={sizeText_button}
         backgroundColor='gray.300'
-        px={4}
-        py={2}
-        transition='all 0.2s'
-        borderRadius='md'
-        borderWidth='1px'
-        _hover={{ bg: 'gray.400' }}
-        _expanded={{ bg: 'blue.400' }}
-        _focus={{ boxShadow: 'outline' }}
+        // px={4}
+        // py={2}
+        // transition='all 0.2s'
+        // borderRadius='md'
+        // borderWidth='1px'
+        // _hover={{ bg: 'gray.400' }}
+        // _expanded={{ bg: 'blue.400' }}
+        // _focus={{ boxShadow: 'outline' }}
+        onClick={()=>setPopUp(true)}
        >
-        Meny</MenuButton>
+        Opprett en konto</MenuButton>
         <MenuList fontSize={sizeText_menu}>
-          <MenuItem onClick={()=>setPopUp(true)}>Opprett konto</MenuItem>
-
-          {popUp&&popupMenu()}
-          <MenuItem>Lær noe nytt</MenuItem>
+          {/* <MenuItem onClick={()=>setPopUp(true)}>Opprett konto</MenuItem> */}
+          <MenuItem >{popUp&&popupMenu()}</MenuItem>
 
         </MenuList>
    </Menu>
