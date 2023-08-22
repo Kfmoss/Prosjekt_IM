@@ -11,7 +11,7 @@ const BlinkCursor = () => {
             return;
         }
         setTitle(' _')
-    }, 1000);
+    }, 600);
 
   return (
     <div>{title}</div>

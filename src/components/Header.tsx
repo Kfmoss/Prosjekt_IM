@@ -1,9 +1,10 @@
-import { Box, Flex, HStack, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, Image, Heading } from "@chakra-ui/react";
 import SearchBar from "./SearchBar";
 import ColorModeSwitch from "./ColorModeSwitch";
 import Tid from "./filter/Tid";
 import ArbeidsType from "./filter/ArbeidsType";
 import BlinkCursor from "./BlinkCursor";
+import AlternativeBlink from "./AlternativeBlink";
 
 
 
@@ -14,8 +15,10 @@ const Header = () => {
     <>
     <HStack justifyContent={'center'}>
      blinking cursor animation
-    <img src="src/assets/informasjon/title33.png" alt="" />
-    <BlinkCursor/>
+    {/* <img src="src/assets/informasjon/title33.png" alt="" /> */}
+    <Heading fontSize={'4xl'}>kodeStorm</Heading>
+    {/* <BlinkCursor/> */}
+    <AlternativeBlink/>
     {/* <Text overflow='hidden' borderRight='.15em solid green' width='0' background='navajowhite' color='white' fontSize='1.2rem'  animation='typing 1s steps(20, end) forwards, blink .8s infinite' fontFamily='sans-serif'>...</Text> */}
 
     <h1></h1>

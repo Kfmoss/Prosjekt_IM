@@ -15,7 +15,7 @@ const ColorModeSwitch = () => {
             <Switch colorScheme='green'  size={'lg'} isChecked={colorMode === 'dark'} onChange={toggleColorMode}/>
         </Box>
         <Box paddingLeft={2}>
-            <Text fontSize='24px'color='red.600'>Dark Mode</Text>
+            <Text fontSize='22px'color='red.600'>Dark Mode</Text>
         </Box>
     </Flex>
   )
